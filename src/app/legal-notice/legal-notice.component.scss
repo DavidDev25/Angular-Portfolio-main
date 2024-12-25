@@ -1,0 +1,54 @@
+.imprint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  color: white;
+  .imprint-site {
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--secondary-color);
+    padding-top: 50px;
+    padding-inline: 96px;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin-bottom: 50px;
+    position: relative;
+
+    @media (max-width: 945px) {
+      margin-block: 25px;
+      padding-inline: 16px;
+      padding-top: 0px;
+    }
+
+    .header,
+    .address,
+    .representedBy,
+    .contact {
+      margin-block: 10px;
+    }
+
+    & a {
+      color: var(--primary-color);
+    }
+
+    & h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin-top: 15px;
+    }
+
+    & ul {
+      margin-left: 20px;
+    }
+
+    & li {
+      margin-block: 10px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.project {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 50px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  gap: 60px;
+  &:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+}
+
+.projectImage {
+  padding-top: 10px;
+}
+
+.gitHubButton {
+  background-color: transparent;
+  color: #e15544;
+  border: 1px solid#02f4bf;
+  padding: 15px 30px 15px 30px;
+  gap: 10px;
+}
+.upperContent,
+.bottomContent,
+h3 {
+  color: #02f4bf;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+}
+
+.gitHubButton,
+.liveTestButton {
+  font-size: 18px;
+  font-weight: 500px;
+  line-height: 21.6px;
+}
+
+.buttongroup {
+  display: flex;
+  gap: 24px;
+}
+.liveTestButton {
+  background: #02f4bf;
+  color: black;
+  padding: 15px 30px 15px 30px;
+  gap: 10px;
+  border: none;
+}
+
+.myProjectText {
+  display: flex;
+  padding-block: 40px;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    line-height: 64.8px;
+    font-weight: 500;
+    font-size: 54px;
+    color: #e15544;
+  }
+}
+
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bottomContent,
+.upperContent {
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+  }
+}
+
+.upperText {
+  display: flex;
+  gap: 17px;
+  flex-direction: column;
+}
+
+.bottomContent {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}

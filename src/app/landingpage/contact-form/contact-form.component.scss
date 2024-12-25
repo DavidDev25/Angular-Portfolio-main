@@ -1,0 +1,138 @@
+.contactForm {
+  display: flex;
+  justify-content: center;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: 1.5px solid #02f4bf;
+}
+
+.sendbutton {
+  border: 1px solid #827b7b;
+  color: #827b7b;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  padding: 15px 30px 15px 30px;
+  gap: 0.625rem;
+}
+
+textarea {
+  width: 795px;
+}
+
+#name,
+#email {
+  height: 56px;
+  width: 507px;
+  color: white;
+}
+
+.contactFormWrapper {
+  display: flex;
+  width: 1440px;
+  gap: 40px;
+  margin-inline: auto;
+  padding-inline: 50px;
+}
+
+.contactInformations {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.textarea {
+  display: flex;
+}
+
+.checkBoxSection {
+  display: flex;
+  width: 1440px;
+  margin-inline: auto;
+  padding-inline: 50px;
+  padding-block: 20px;
+  color: white;
+  justify-content: space-between;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  width: fit-content;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.checkboxItem:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+.span {
+  color: white;
+}
+.checkbox {
+  appearance: none;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e15544;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #02f4bf;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 3px;
+  border-bottom: 2px solid #e15544;
+  border-left: 2px solid #e15544;
+  transform: rotate(-45deg);
+}
+
+.checkbox:hover {
+  background-color: #02f4bf;
+}
+
+.privacy-highlight {
+  color: #e15544;
+}
+
+.confirmationSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+textarea::placeholder {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+textarea {
+  color: white;
+}
+
+#name::placeholder,
+#email::placeholder {
+  padding-left: 10px;
+}
+
+.sendbutton {
+  margin-top: 60px;
+}
+
+.privacyTwo {
+  color: #e15544;
+}

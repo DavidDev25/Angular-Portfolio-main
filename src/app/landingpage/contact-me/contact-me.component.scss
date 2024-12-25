@@ -1,0 +1,92 @@
+.contactMeWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 50px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.contactMe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8125rem;
+  font-size: 54px;
+  line-height: 65px;
+  font-weight: 500;
+  color: #e15544;
+  p {
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: justify;
+    color: #02f4bf;
+  }
+}
+
+.mail,
+.Phone {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  span {
+    font-size: 20px;
+    font-family: 500;
+    color: #02f4bf;
+    line-height: 24px;
+  }
+}
+
+.bottomSection {
+  gap: 6.0625rem;
+}
+
+.contactInformation {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-direction: column;
+}
+
+.upperSection {
+  display: flex;
+  width: 100%;
+  align-items: end;
+  gap: 24px;
+}
+
+img {
+  padding-bottom: 8px;
+}
+
+.bottomSection {
+  display: flex;
+}
+
+.agreeSection {
+  p {
+    color: #02f4bf;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.privPolicyColored {
+  color: #e15544;
+}
+
+input.custom {
+  border-color: #e15544;
+  background: none;
+}
+
+.sendRequestButton {
+  display: flex;
+  color: #827b7b;
+  padding: 15px 30px 15px 30px;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid #827b7b;
+}

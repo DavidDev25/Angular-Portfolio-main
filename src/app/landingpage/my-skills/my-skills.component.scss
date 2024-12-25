@@ -1,0 +1,60 @@
+.SkillsWrapper {
+  max-width: 1440px;
+  width: 100%;
+  padding-top: 5px;
+  margin-inline: auto;
+
+  h3 {
+    font-size: 54px;
+    color: #e15544;
+    line-height: 64.8px0;
+  }
+
+  img {
+    width: 88px;
+    height: 100px;
+  }
+}
+
+.Skills {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 100px 131px;
+  margin-inline: auto;
+  justify-content: center;
+
+  .ChallengeMeText {
+    cursor: pointer;
+    grid-column: span 2;
+    font-size: 14px;
+    color: rgba(2, 244, 191, 1);
+    visibility: hidden;
+  }
+}
+
+.ChallengeMe {
+  &:hover + .ChallengeMeText {
+    visibility: visible;
+  }
+}
+
+.Skillstext {
+  line-height: 25.2px;
+  font-weight: 700;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.skillsIntroduction {
+  padding-block: 40px;
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 105px;
+}

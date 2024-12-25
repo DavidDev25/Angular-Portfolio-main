@@ -1,0 +1,49 @@
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e15544;
+}
+
+.TestimonialsWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 50px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  gap: 60px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 25.2px;
+  color: #02f4bf;
+  font-weight: 400;
+  padding-bottom: 32px;
+  padding-top: 8px;
+}
+.Testimonials {
+  flex: 1;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #02f4bf;
+    line-height: 21.6px;
+  }
+}
+
+.AllTestimonials {
+  display: flex;
+  gap: 32px;
+}
+
+svg {
+  min-width: 70px;
+  min-height: 104px;
+  max-width: 70px;
+  max-height: 104px;
+  flex-grow: 0;
+}

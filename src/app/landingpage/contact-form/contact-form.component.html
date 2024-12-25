@@ -1,0 +1,40 @@
+<div class="contactForm">
+    <form name="contactForm" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div>
+            <div class="contactFormWrapper">
+                <div class="contactInformations">
+                    <input #name="ngModel" [(ngModel)]="contactData.name" [ngModelOptions]="{standalone:true}"
+                        type="text" id="name" name="name" placeholder="{{ 'contactform.name' | translate}}"
+                        minlength="2" required pattern="">
+                    <input #mail="ngModel" [(ngModel)]="contactData.email" [ngModelOptions]="{standalone:true}"
+                        type="email" name="email" id="email" placeholder="{{'contactform.mail' | translate}}" required
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    @if (!mail.valid && mail.touched) {
+                    <span>Please enter E-Mail</span>
+                    }
+                </div>
+                <div class="textarea">
+                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
+                        [ngModelOptions]="{standalone:true}" name="message" id="message"
+                        placeholder="{{'contactform.message'| translate}}"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="checkBoxSection">
+            <div class="confirmationSection">
+                <label class="checkboxItem">
+                    <input type="checkbox" name="checkbox" class="checkbox" />
+                </label>
+                <p>{{'contactform.privacyOne'|translate}} <span class="privacyTwo">{{'contactform.privacyTwo' |
+                        translate}} </span>
+                    {{'contactform.privacyThree' | translate }}</p>
+            </div>
+            <div class="sendBtn">
+                @if (!message.valid && message.touched) {
+                <span>Please enter a message</span>
+                }
+                <input class="sendbutton" type="submit" value="Send">
+            </div>
+        </div>
+    </form>
+</div>

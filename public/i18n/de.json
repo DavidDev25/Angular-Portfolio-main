@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "whyMe": "Wieso mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "whyMe": {
+    "whyMe": "Wieso mich",
+    "description": "Ich bin motiviert, kontinuierlich neue Technologien zu erlernen und mich weiterzuentwickeln. Meine Fähigkeit, komplexe Probleme zu lösen, sowie meine   Leidenschaft für das Programmieren machen mich zu einem wertvollen Mitglied Ihres Teams.",
+    "Iam": "Ich bin",
+    "locatedText": "wohnhaft in Weißenburg",
+    "remoteWork": "Ich bin offen für Remote Arbeit",
+    "letsTalkButton": "Let's talk"
+  },
+  "Skills": {
+    "mySkills": "Meine Skills",
+    "challengeMe": "Vordere mich heraus",
+    "challengeMeHidden": "Ich freue mich neue Technologien zu lernen, sag mir was benötigt wird"
+  },
+  "MyProjects": {
+    "headLine": "Meine Projekte",
+    "joinText": "Ein Task Managment System Inspiriert durchs Kanban System. Erstelle neue Aufgaben, weise Sie dem User zu und Verwalte Aufgaben indem du das Drag und Drop System nutzt ",
+    "ElPolloLocoText": "Ein Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen das verrückte Huhn zu kämpfen."
+  },
+  "Review": {
+    "reviewOne": "David hat das Projekt durch seine Unterstützung im Kanban- und Scrum-Management sowie durch Beiträge im Bereich CSS und JavaScript begleitet. Die Zusammenarbeit war stets angenehm und harmonisch.",
+    "reviewTwo": "David hat mich vor allem durch seine schnelle Auffassungsgabe beeindruckt. Wenn es darum ging, sich in neue Software einzuarbeiten, war er immer sehr fix und konnte sofort produktiv einsteigen.<br>Seine organisatorischen Stärken, insbesondere in Kanban und <br>Scrum, haben dem Projekt eine gute Struktur gegeben, und <br>ich habe die Zusammenarbeit mit Ihm als sehr angenehm und <br>unterstützend empfunden.",
+    "reviewThree": "David hat maßgeblich zum Projekterfolg beigetragen, indem er rasch entscheidende Software- und Drittanbieter-Services identifizierte, die für die Entwicklung unverzichtbar waren. Er eignete sich das Wissen dazu schnell an und führte das Team praktisch in diese Anwendungen ein. Zudem übernahm er die Rolle des Scrum Masters und sorgte für eine strukturierte, zielgerichtete Arbeitsweise im Team."
+  },
+  "contact": {
+    "head": "Kontaktiere mich",
+    "headline": "Sie sind sich noch nicht sicher, ob ich die richtige Person für Ihr Projekt bin? Kontaktieren Sie mich, damit ich Sie beruhigen kann. Lassen Sie uns gemeinsam arbeiten."
+  },
+  "contactform": {
+    "name": "Dein Name",
+    "mail": "Deine E-mail",
+    "message": "Deine Nachricht an mich",
+    "privacyOne": "Ich habe die ",
+    "privacyTwo": "Datenschutzerklärung",
+    "privacyThree": "gelesen und willige in die darin beschriebene Verarbeitung meiner Daten ein"
+  }
+}

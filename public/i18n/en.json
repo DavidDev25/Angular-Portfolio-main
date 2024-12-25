@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "whyMe": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "whyMe": {
+    "whyMe": "Why me",
+    "description": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member of your team.",
+    "Iam": "I am",
+    "locatedText": "located in Weißenburg",
+    "relocate": "open to travel",
+    "remoteWork": "open to work remote",
+    "letsTalkButton": "Let's talk"
+  },
+  "Skills": {
+    "mySkills": "My Skills",
+    "challengeMe": "Challenge Me",
+    "challengeMeHidden": "I am always happy to learn new technologies, just tell me what you need"
+  },
+  "MyProjects": {
+    "headLine": "Meine Projekte",
+    "joinText": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "ElPolloLocoText": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and Tabasco salsa to fight against the crazy hen."
+  },
+  "Review": {
+    "reviewOne": "David supported the project through his assistance in Kanban and Scrum management, as well as contributions in CSS and JavaScript. The collaboration was consistently pleasant and harmonious.",
+    "reviewTwo": "David impressed me primarily with his quick comprehension. When it came to familiarizing himself with new software, he was always very swift and could immediately start being productive. His organizational strengths, especially in Kanban and Scrum, provided the project with a good structure, and I found working with him to be very pleasant and supportive.",
+    "reviewThree": "David made a crucial contribution to the project's success by swiftly identifying relevant software solutions and third-party services that were essential for development. After quickly familiarizing himself with these tools, he took charge of introducing and implementing them within the team, significantly enhancing efficiency and productivity.Furthermore, David assumed the role of Scrum Master. In this capacity, he established a structured, goal-oriented work approach and ensured that all team members effectively implemented the principles of the Scrum framework. He facilitated Scrum events, removed obstacles in the work process, and promoted continuous improvement of team dynamics.His contribution encompassed both technical and organizational aspects, which was instrumental in the successful execution of the project."
+  },
+  "contact": {
+    "head": "Contact me",
+    "headline": "Still not sure if I am the right person for your project? Contact me so I can reassure you. Let us work together"
+  },
+  "contactform": {
+    "name": "Your Name",
+    "mail": "Your E-mail",
+    "message": "Your message",
+    "privacyOne": "I've read the",
+    "privacyTwo": " privacy policy",
+    "privacyThree": "and agree to the processing of my data as outlined."
+  }
+}

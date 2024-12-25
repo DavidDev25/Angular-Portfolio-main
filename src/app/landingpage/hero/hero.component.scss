@@ -1,0 +1,66 @@
+.heroWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+
+  padding-top: 5px;
+}
+
+.introduction {
+  padding-left: 50px;
+}
+
+.contactMeButton {
+  margin-left: 50px;
+  margin-top: 120px;
+}
+
+button {
+  cursor: pointer;
+  rotate: 180deg;
+  border: 1px solid;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  gap: 10px;
+  background: transparent;
+  color: #e15544;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.6px;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+}
+
+.introduction {
+  color: #02f4bf;
+  h1 {
+    font-size: 82px;
+    line-height: 98.4px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 54px;
+    line-height: 65px;
+    font-weight: 500;
+    font-family: Roboto Mono;
+    text-transform: uppercase;
+  }
+}
+
+.leftHeroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.unneccaressaryArrowDown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  min-height: 100%;
+}

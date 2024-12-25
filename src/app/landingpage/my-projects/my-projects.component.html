@@ -1,0 +1,49 @@
+<section>
+    <div class="myProjectText">
+        <h1>My Projects</h1>
+    </div>
+    <div class="project">
+        <div class="projectImage">
+            <img src="/projectPictures/join.jpg" alt="">
+        </div>
+        <div class="projectWrapper">
+            <div class="upperContent">
+                <div class="upperText">
+                    <h3>Join</h3>
+                    <p> Angular | TypeScript | HTML | CSS | Firebase </p>
+                </div>
+            </div>
+            <div class="bottomContent">
+                <p class="bottomText">
+                    {{ 'MyProjects.joinText' | translate}}
+                </p>
+                <div class="buttongroup">
+                    <button class="gitHubButton" (click)="redirectJoin()">Github</button>
+                    <button class="liveTestButton" (click)="redirectJoinLive()">Live Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <div class="projectImage">
+            <img src="/projectPictures/Pollo_loco.png" alt="">
+        </div>
+        <div class="projectWrapper">
+            <div class="upperContent">
+                <div class="upperText">
+                    <h3>Pollo Loco</h3>
+                    <p>HTML | CSS | JavaScript </p>
+                </div>
+            </div>
+            <div class="bottomContent">
+                <p class="bottomText">
+                    {{ 'MyProjects.ElPolloLocoText' | translate}}
+                </p>
+                <div class="buttongroup">
+                    <button class="gitHubButton" (click)="redirect()"> Github</button>
+                    <button class="liveTestButton" (click)="redirectPolloLive()">Live Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
