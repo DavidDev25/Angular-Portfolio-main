@@ -1,3 +1,7 @@
+.hero {
+  height: 100dvh;
+}
+
 .heroWrapper {
   display: flex;
   justify-content: space-between;
@@ -107,32 +111,61 @@ button {
   }
 }
 
-@media screen and (max-width: 850px) {
-  .introduction h2 {
-    font-size: 24px;
-    line-height: 50px;
-  }
-  .introduction h1 {
-    font-size: 36px;
-    line-height: 50px;
-  }
-
-  img {
-    width: 250px;
-    height: 250px;
-  }
-
-  .unneccaressaryArrowDown img {
-    width: 60px;
-    height: 60px;
-  }
-
+@media screen and (max-width: 984) {
   .contactMeButton {
-    margin-top: 10px;
+    display: none;
   }
 }
 
+// @media screen and (max-width: 850px) {
+//   .hero {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//   }
+
+//   .introduction {
+//     padding-top: 30px;
+//     padding-right: 20px;
+//   }
+//   .introduction h2 {
+//     font-size: 24px;
+//     line-height: 50px;
+//   }
+
+//   .introduction h1 {
+//     font-size: 36px;
+//     line-height: 50px;
+//   }
+
+//   img {
+//     width: 250px;
+//     height: 250px;
+//   }
+
+//   .unneccaressaryArrowDown img {
+//     width: 60px;
+//     height: 60px;
+//   }
+
+//   .heroWrapper {
+//     display: flex;
+//     align-items: center;
+//     justify-content: unset;
+//     gap: 220px;
+//   }
+
+//   .contactMeButton {
+//     margin-top: 10px;
+//   }
+// }
+
 @media screen and (max-width: 768px) {
+  .hero {
+    display: flex;
+  }
+
   .introduction {
     padding-left: 0px;
   }
@@ -143,12 +176,12 @@ button {
   }
   .introduction h1 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 50px;
   }
 
   img {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
   }
 
   .unneccaressaryArrowDown img {
@@ -159,7 +192,6 @@ button {
     margin-top: 0px;
   }
   .heroWrapper {
-    display: flex;
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
@@ -169,6 +201,11 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .introduction {
+    text-align: center;
   }
 
   .contactMeButton {
