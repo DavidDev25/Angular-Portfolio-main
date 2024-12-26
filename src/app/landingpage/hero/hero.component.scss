@@ -65,7 +65,21 @@ button {
   min-height: 100%;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1210px) {
+  .introduction h1 {
+    font-size: 42px;
+  }
+
+  .unneccaressaryArrowDown img {
+    width: 80px;
+    height: 80px;
+  }
+  .introduction h2 {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 975px) {
   .introduction h2 {
     font-size: 32px;
   }
@@ -74,14 +88,13 @@ button {
     font-size: 52px;
   }
 
+  .unneccaressaryArrowDown {
+    display: none;
+  }
+
   img {
     width: 350px;
     height: 350px;
-  }
-
-  .unneccaressaryArrowDown img {
-    width: 80px;
-    height: 80px;
   }
 
   .contactMeButton {
@@ -120,18 +133,22 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .introduction {
+    padding-left: 0px;
+  }
+
   .introduction h2 {
     font-size: 20px;
     line-height: 30px;
   }
   .introduction h1 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
   }
 
   img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   .unneccaressaryArrowDown img {
@@ -140,5 +157,21 @@ button {
 
   .contactMeButton {
     margin-top: 0px;
+  }
+  .heroWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .introductionWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contactMeButton {
+    display: none;
   }
 }
