@@ -54,6 +54,9 @@ img {
 }
 
 @media screen and (max-width: 975px) {
+  nav {
+    position: static;
+  }
   .navbarText a {
     font-size: 16px;
   }
@@ -69,6 +72,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  nav {
+    position: static;
+  }
+
   .navbar {
     padding-inline: 24px;
   }
