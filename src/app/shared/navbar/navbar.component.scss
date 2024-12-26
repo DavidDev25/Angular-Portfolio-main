@@ -52,3 +52,32 @@ img {
     color: #e15544;
   }
 }
+
+@media screen and (max-width: 950px) {
+  .navbarText a {
+    font-size: 16px;
+  }
+
+  .toggle_switch {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .navbarText {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-inline: 24px;
+  }
+
+  .navbarText {
+    display: none;
+  }
+
+  .toggle_switch {
+    display: none;
+  }
+}

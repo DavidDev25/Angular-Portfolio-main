@@ -64,3 +64,81 @@ button {
   cursor: pointer;
   min-height: 100%;
 }
+
+@media screen and (max-width: 950px) {
+  .introduction h2 {
+    font-size: 32px;
+  }
+
+  .introduction h1 {
+    font-size: 52px;
+  }
+
+  img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .unneccaressaryArrowDown img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contactMeButton {
+    button {
+      padding: 10px 5px;
+      font-size: 14px;
+      line-height: 21.6px;
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .introduction h2 {
+    font-size: 24px;
+    line-height: 50px;
+  }
+  .introduction h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .unneccaressaryArrowDown img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contactMeButton {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introduction h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .introduction h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .unneccaressaryArrowDown img {
+    display: none;
+  }
+
+  .contactMeButton {
+    margin-top: 0px;
+  }
+}
