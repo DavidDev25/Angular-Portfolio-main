@@ -58,3 +58,40 @@
 section {
   margin-bottom: 105px;
 }
+
+@media screen and (max-width: 1200px) {
+  .Skills {
+    width: 700px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .Skillstext img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skillsIntroduction {
+    h3 {
+      font-size: 36px;
+    }
+  }
+
+  .Skillstext img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Skills {
+    width: 300px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 50px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
