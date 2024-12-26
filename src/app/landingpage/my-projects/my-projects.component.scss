@@ -92,3 +92,67 @@ h3 {
   gap: 40px;
   flex-direction: column;
 }
+
+.projectImageSwap img {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .projectWrapper h3 {
+    font-size: 40px;
+  }
+
+  .upperContent p,
+  .bottomContent p {
+    font-size: 14px;
+  }
+
+  .gitHubButton,
+  .liveTestButton {
+    font-size: unset;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .myProjectText {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  .projectImage img {
+    display: none;
+  }
+
+  .projectImageSwap img {
+    width: 300px;
+    height: 200px;
+    display: inline;
+  }
+
+  .gitHubButton,
+  .liveTestButton {
+    font-size: unset;
+  }
+
+  .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: unset;
+  }
+
+  .buttongroup {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .gitHubButton,
+  .liveTestButton {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
