@@ -1,5 +1,4 @@
 .whyMeWrapper {
-  margin-top: 105px;
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
@@ -105,4 +104,150 @@ button {
   flex-direction: column;
   gap: 33px;
   padding-left: 300px;
+}
+
+@media screen and (max-width: 1330px) {
+  .whyMe img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .WhyMeDescription {
+    h2 {
+      font-size: 40px;
+      line-height: 48px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .roadmap {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .whyMe img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .WhyMeDescription {
+    line-height: 15;
+  }
+
+  .located {
+    padding-left: 10px;
+    gap: 32px;
+  }
+
+  .relocate {
+    padding-left: 10px;
+  }
+
+  .remote {
+    padding-left: 10px;
+    justify-content: unset;
+  }
+
+  .remoteText {
+    p {
+      font-size: 16px;
+      padding-left: 17px;
+    }
+  }
+
+  .remoteImage {
+    img {
+      width: 27px;
+      height: 60px;
+    }
+  }
+
+  .letsTalkButton {
+    padding-left: 290px;
+    justify-content: unset;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .whyMeWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .roadmap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyMe img {
+    display: none;
+  }
+  .WhyMeDescription {
+    h2 {
+      font-size: 30px;
+      line-height: 32px;
+    }
+
+    p {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+
+  .located {
+    h3 {
+      font-size: 14px;
+    }
+  }
+
+  .locatedText {
+    p {
+      font-size: 10px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .remoteText {
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .relocate {
+    img {
+      width: 25px;
+      height: 40px;
+    }
+  }
+
+  .remoteImage {
+    width: 25px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .letsTalkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 40px;
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .whyMeWrapper {
+    margin: 0px;
+    padding: 0px;
+  }
 }
