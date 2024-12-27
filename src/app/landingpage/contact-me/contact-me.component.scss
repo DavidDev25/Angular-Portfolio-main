@@ -26,6 +26,10 @@
   }
 }
 
+.catchPhrase {
+  width: 45%;
+}
+
 .mail,
 .Phone {
   display: flex;
@@ -40,7 +44,8 @@
 }
 
 .bottomSection {
-  gap: 97px;
+  display: flex;
+  gap: 40px;
 }
 
 .contactInformation {
@@ -48,6 +53,7 @@
   justify-content: center;
   gap: 14px;
   flex-direction: column;
+  width: 60%;
 }
 
 .upperSection {
@@ -59,10 +65,6 @@
 
 img {
   padding-bottom: 8px;
-}
-
-.bottomSection {
-  display: flex;
 }
 
 .agreeSection {
@@ -96,7 +98,7 @@ input.custom {
     justify-content: center;
   }
   .bottomSection {
-    gap: 60px;
+    gap: 70px;
     & p,
     span {
       font-size: 16px;

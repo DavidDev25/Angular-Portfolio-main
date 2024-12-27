@@ -1,7 +1,6 @@
 .contactForm {
   display: flex;
   justify-content: center;
-
   max-width: 1440px;
   width: 100%;
   margin-inline: auto;
@@ -31,14 +30,13 @@ textarea {
 #name,
 #email {
   height: 56px;
-  width: 507px;
+  width: 550px;
   color: white;
 }
 
 .contactFormWrapper {
   display: flex;
   max-width: 1440px;
-  width: 100%;
   gap: 40px;
   margin-inline: auto;
   padding-inline: 50px;
@@ -47,7 +45,8 @@ textarea {
 .contactInformations {
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: 40px;
+  width: 45%;
 }
 
 .textarea {
