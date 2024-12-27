@@ -13,5 +13,29 @@
             <div class="vertical-line">|</div>
             <button (click)="translate.switchLanguage('en')">EN</button>
         </div>
+        <div class="responsiveMenu" (click)="toggleMenu()">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 6L20 6" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
     </div>
 </nav>
+<div class="navbarTextResponsive" [class.open]="isMenuOpen">
+    <div class="close-icon" (click)="toggleMenu()">
+        <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#E15544" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 6L18 18" stroke="#E15544" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+    <a href="">{{ 'navbar.whyMe' | translate}}</a>
+    <a href="">{{ 'navbar.skills' | translate}}</a>
+    <a href="">{{ 'navbar.projects' | translate}}</a>
+    <a href="">{{ 'navbar.contact' | translate}}</a>
+    <div class="toggle_switch_responsive">
+        <button (click)="translate.switchLanguage('de')">DE</button>
+        <div class="vertical-line">|</div>
+        <button (click)="translate.switchLanguage('en')">EN</button>
+    </div>
+</div>

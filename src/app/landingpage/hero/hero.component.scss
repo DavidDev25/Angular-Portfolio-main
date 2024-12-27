@@ -117,50 +117,6 @@ button {
   }
 }
 
-// @media screen and (max-width: 850px) {
-//   .hero {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//   }
-
-//   .introduction {
-//     padding-top: 30px;
-//     padding-right: 20px;
-//   }
-//   .introduction h2 {
-//     font-size: 24px;
-//     line-height: 50px;
-//   }
-
-//   .introduction h1 {
-//     font-size: 36px;
-//     line-height: 50px;
-//   }
-
-//   img {
-//     width: 250px;
-//     height: 250px;
-//   }
-
-//   .unneccaressaryArrowDown img {
-//     width: 60px;
-//     height: 60px;
-//   }
-
-//   .heroWrapper {
-//     display: flex;
-//     align-items: center;
-//     justify-content: unset;
-//     gap: 220px;
-//   }
-
-//   .contactMeButton {
-//     margin-top: 10px;
-//   }
-// }
-
 @media screen and (max-width: 768px) {
   .hero {
     display: flex;
@@ -180,7 +136,7 @@ button {
   }
 
   img {
-    width: 350px;
+    width: 300px;
     height: 350px;
   }
 

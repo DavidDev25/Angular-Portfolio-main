@@ -10,4 +10,9 @@ import { TranslationService } from '../../../../public/i18n/translation.service'
 })
 export class NavbarComponent {
   translate = inject(TranslationService);
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
