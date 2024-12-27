@@ -40,7 +40,7 @@
 }
 
 .bottomSection {
-  gap: 6.0625rem;
+  gap: 97px;
 }
 
 .contactInformation {
@@ -89,6 +89,45 @@ input.custom {
   gap: 10px;
   background: transparent;
   border: 1px solid #827b7b;
+}
+
+@media screen and (max-width: 1370px) {
+  .upperSection {
+    justify-content: center;
+  }
+  .bottomSection {
+    gap: 60px;
+    & p,
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .upperSection {
+    justify-content: center;
+  }
+  .bottomSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    & p {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+
+    .contactInformation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & span {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
