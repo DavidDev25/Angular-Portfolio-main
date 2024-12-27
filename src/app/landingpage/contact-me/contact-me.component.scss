@@ -27,7 +27,7 @@
 }
 
 .catchPhrase {
-  width: 45%;
+  width: 42%;
 }
 
 .mail,
@@ -45,7 +45,7 @@
 
 .bottomSection {
   display: flex;
-  gap: 40px;
+  gap: 45px;
 }
 
 .contactInformation {
@@ -98,11 +98,18 @@ input.custom {
     justify-content: center;
   }
   .bottomSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 70px;
     & p,
     span {
       font-size: 16px;
     }
+  }
+
+  .contactInformation {
+    width: 33%;
   }
 }
 
@@ -114,6 +121,7 @@ input.custom {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     & p {
       font-size: 14px;
       line-height: 16.8px;
@@ -149,6 +157,7 @@ input.custom {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 
     & p {
       font-size: 14px;
