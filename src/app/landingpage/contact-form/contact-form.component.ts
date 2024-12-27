@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -10,7 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
   placeholdertext: any = 'Your Name ';
 
   http = inject(HttpClient);
@@ -22,6 +22,8 @@ export class ContactFormComponent {
   };
 
   mailTest = true;
+  isFormValid = false;
+  isCheckboxChecked = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -34,21 +36,46 @@ export class ContactFormComponent {
     },
   };
 
+  ngOnInit() {
+    this.checkFormValidity();
+  }
+
+  checkFormValidity() {
+    this.isFormValid =
+      this.contactData.name.trim() !== '' &&
+      this.contactData.email.trim() !== '' &&
+      this.contactData.message.trim() !== '' &&
+      this.isCheckboxChecked;
+  }
+
+  onCheckboxChange(event: any) {
+    this.isCheckboxChecked = event.target.checked;
+    this.checkFormValidity();
+  }
+
+  onInputChange() {
+    this.checkFormValidity();
+  }
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (this.isFormValid && !this.mailTest) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.isCheckboxChecked = false;
+            this.checkFormValidity();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (this.isFormValid && this.mailTest) {
       ngForm.resetForm();
+      this.isCheckboxChecked = false;
+      this.checkFormValidity();
     }
   }
 }
