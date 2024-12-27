@@ -136,3 +136,33 @@ textarea {
 .privacyTwo {
   color: #e15544;
 }
+
+@media screen and (max-width: 768px) {
+  .contactInformations {
+    gap: 20px;
+  }
+
+  .contactFormWrapper {
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: none;
+    }
+  }
+
+  .checkBoxSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #name,
+  #email,
+  .textarea {
+    width: 300px;
+    height: 40px;
+  }
+}

@@ -22,12 +22,14 @@
         </div>
         <div class="checkBoxSection">
             <div class="confirmationSection">
-                <label class="checkboxItem">
-                    <input type="checkbox" name="checkbox" class="checkbox" />
-                </label>
-                <p>{{'contactform.privacyOne'|translate}} <span class="privacyTwo">{{'contactform.privacyTwo' |
-                        translate}} </span>
-                    {{'contactform.privacyThree' | translate }}</p>
+                <div class="confirmationSectionWrapper">
+                    <label class="checkboxItem">
+                        <input type="checkbox" name="checkbox" class="checkbox" />
+                    </label>
+                    <p>{{'contactform.privacyOne'|translate}} <span class="privacyTwo">{{'contactform.privacyTwo' |
+                            translate}} </span>
+                        {{'contactform.privacyThree' | translate }}</p>
+                </div>
             </div>
             <div class="sendBtn">
                 @if (!message.valid && message.touched) {
