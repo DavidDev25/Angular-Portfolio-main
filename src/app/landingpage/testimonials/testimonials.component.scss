@@ -24,6 +24,7 @@ h4 {
   padding-bottom: 32px;
   padding-top: 8px;
 }
+
 .Testimonials {
   flex: 1;
 
@@ -46,4 +47,52 @@ svg {
   max-width: 70px;
   max-height: 104px;
   flex-grow: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .TestimonialsWrapper {
+    padding-inline: 20px;
+    overflow-x: hidden;
+  }
+
+  .AllTestimonials {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+
+  .Testimonials {
+    flex: 0 0 auto;
+    width: 250px;
+    overflow-y: auto;
+    height: 500px;
+    font-size: 10px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    border: 1px solid white;
+    text-align: center;
+    white-space: normal;
+  }
+
+  svg {
+    display: none;
+  }
 }
