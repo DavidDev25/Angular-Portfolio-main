@@ -3,20 +3,29 @@
         <div>
             <div class="contactFormWrapper">
                 <div class="contactInformations">
-                    <input #name="ngModel" [(ngModel)]="contactData.name" [ngModelOptions]="{standalone:true}"
-                        type="text" id="name" name="name" placeholder="{{ 'contactform.name' | translate}}"
-                        minlength="2" required pattern="">
-                    <input #mail="ngModel" [(ngModel)]="contactData.email" [ngModelOptions]="{standalone:true}"
-                        type="email" name="email" id="email" placeholder="{{'contactform.mail' | translate}}" required
-                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                    @if (!mail.valid && mail.touched) {
-                    <span>Please enter E-Mail</span>
-                    }
+                    <div class="input-container">
+                        <input #name="ngModel" [(ngModel)]="contactData.name" [ngModelOptions]="{standalone:true}"
+                            type="text" id="name" name="name" placeholder="{{ 'contactform.name' | translate}}"
+                            minlength="2" required pattern="">
+                        <span class="validation-message" *ngIf="!name.valid && name.touched">Bitte geben Sie einen Namen
+                            ein</span>
+                    </div>
+                    <div class="input-container">
+                        <input #mail="ngModel" [(ngModel)]="contactData.email" [ngModelOptions]="{standalone:true}"
+                            type="email" name="email" id="email" placeholder="{{'contactform.mail' | translate}}"
+                            required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                        <span class="validation-message" *ngIf="!mail.valid && mail.touched">Bitte geben Sie eine
+                            E-Mail-Adresse ein</span>
+                    </div>
                 </div>
                 <div class="textarea">
-                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
-                        [ngModelOptions]="{standalone:true}" name="message" id="message"
-                        placeholder="{{'contactform.message'| translate}}"></textarea>
+                    <div class="input-container">
+                        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
+                            [ngModelOptions]="{standalone:true}" name="message" id="message"
+                            placeholder="{{'contactform.message'| translate}}"></textarea>
+                        <span class="validation-message" *ngIf="!message.valid && message.touched">Bitte geben Sie eine
+                            Nachricht ein</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,9 +42,6 @@
                 </div>
             </div>
             <div class="sendBtn">
-                @if (!message.valid && message.touched) {
-                <span>Please enter a message</span>
-                }
                 <input class="sendbutton" type="submit" value="Send">
             </div>
         </div>
