@@ -78,18 +78,22 @@
 }
 
 @media screen and (max-width: 768px) {
-  .footerContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    flex-direction: column;
+  .footerWrapper {
+    height: fit-content;
 
-    h2 {
-      font-size: 24px;
+    .footerContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      flex-direction: column;
+      height: fit-content;
+
+      h2 {
+        font-size: 24px;
+      }
     }
   }
-
   .leftFooter {
     display: flex;
     align-items: center;
