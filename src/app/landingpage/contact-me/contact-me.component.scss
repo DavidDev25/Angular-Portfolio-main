@@ -90,3 +90,43 @@ input.custom {
   background: transparent;
   border: 1px solid #827b7b;
 }
+
+@media screen and (max-width: 768px) {
+  .upperSection {
+    justify-content: center;
+    h3 {
+      font-size: 24px;
+      line-height: 25px;
+    }
+    & svg {
+      display: none;
+    }
+  }
+
+  .bottomSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    & p {
+      font-size: 14px;
+      line-height: 16.8px;
+      text-align: center;
+    }
+  }
+
+  .catchPhrase {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .contactMeWrapper img {
+    display: none;
+  }
+
+  .contactInformation {
+    display: none;
+  }
+}
