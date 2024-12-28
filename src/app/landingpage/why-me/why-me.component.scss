@@ -126,10 +126,12 @@ button {
   }
   .roadmap {
     padding-left: 10px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 984px) {
+@media screen and (max-width: 1000px) {
   .whyMe img {
     width: 250px;
     height: 250px;
@@ -168,8 +170,8 @@ button {
   }
 
   .letsTalkButton {
-    padding-left: 290px;
     justify-content: unset;
+    padding-left: 100px;
   }
 }
 
