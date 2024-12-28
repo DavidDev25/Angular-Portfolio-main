@@ -43,6 +43,7 @@
     "privacyOne": "I accept the",
     "privacyTwo": "privacy policy",
     "privacyThree": "and agree to the processing of my data as outlined.",
-    "send": "Send"
+    "send": "Send",
+    "feedbackMessage": "Thank you for your message, I will get back to you as soon as possible."
   }
 }

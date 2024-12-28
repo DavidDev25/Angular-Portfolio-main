@@ -42,6 +42,7 @@
     "privacyOne": "Ich akzeptiere die",
     "privacyTwo": "Datenschutzrichtlinie",
     "privacyThree": "und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-    "send": "Senden"
+    "send": "Senden",
+    "feedbackMessage": "Vielen Dank für Ihre Nachricht, ich werde mich so schnell wie möglich bei Ihnen melden."
   }
 }
