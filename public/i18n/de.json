@@ -33,11 +33,15 @@
     "headline": "Sie sind sich noch nicht sicher, ob ich die richtige Person für Ihr Projekt bin? Kontaktieren Sie mich, damit ich Sie beruhigen kann. Lassen Sie uns gemeinsam arbeiten."
   },
   "contactform": {
-    "name": "Dein Name",
-    "mail": "Deine E-mail",
-    "message": "Deine Nachricht an mich",
-    "privacyOne": "Ich habe die ",
-    "privacyTwo": "Datenschutzerklärung",
-    "privacyThree": "gelesen und willige in die darin beschriebene Verarbeitung meiner Daten ein"
+    "name": "Name eingeben",
+    "mail": "E-Mail-Adresse eingeben",
+    "message": "Nachricht eingeben",
+    "nameValidation": "Bitte geben Sie einen gültigen Namen ein (mindestens 2 Zeichen)",
+    "emailValidation": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "messageValidation": "Bitte geben Sie eine Nachricht ein (mindestens 4 Zeichen)",
+    "privacyOne": "Ich akzeptiere die",
+    "privacyTwo": "Datenschutzrichtlinie",
+    "privacyThree": "und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "send": "Senden"
   }
 }
