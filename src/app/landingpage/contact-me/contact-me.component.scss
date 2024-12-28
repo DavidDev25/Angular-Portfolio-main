@@ -75,6 +75,7 @@ $text-color: #827b7b;
 
 .Phone {
   @extend %contact-info;
+  text-decoration: none;
 }
 
 .bottomSection {
