@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,6 +17,7 @@ export class ContactFormComponent {
   private checkboxRef!: HTMLInputElement;
 
   http = inject(HttpClient);
+  router = inject(Router);
 
   contactData = {
     name: '',
@@ -116,5 +118,10 @@ export class ContactFormComponent {
       this.resetInput();
       ngForm.resetForm();
     }
+  }
+
+  navigateToPrivacyPolicy(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/privacy-policy']);
   }
 }
