@@ -16,8 +16,17 @@ export class NavbarComponent {
 
   isMenuOpen = false;
 
+  disableScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  enableScroll() {
+    document.body.style.overflow = '';
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.disableScroll();
   }
 
   navigateToSection(fragment: string): void {
