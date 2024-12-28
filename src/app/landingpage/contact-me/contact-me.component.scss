@@ -6,6 +6,7 @@ $text-color: #827b7b;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .contactMeWrapper {
@@ -151,6 +152,7 @@ input.custom {
     justify-content: center;
   }
   .bottomSection {
+    width: 100%;
     @include flex-center;
     flex-direction: column;
     & p {
@@ -186,15 +188,15 @@ input.custom {
     flex-direction: column;
     text-align: center;
     & p {
-      font-size: 14px;
-      line-height: 16.8px;
+      font-size: 12px;
+      line-height: 14.8px;
       text-align: center;
     }
   }
 
   .catchPhrase {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 20px;
     text-align: center;
   }
 
