@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -10,8 +10,10 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
-export class ContactFormComponent implements OnInit {
+export class ContactFormComponent {
   placeholdertext: any = 'Your Name ';
+
+  private checkboxRef!: HTMLInputElement;
 
   http = inject(HttpClient);
 
@@ -19,11 +21,54 @@ export class ContactFormComponent implements OnInit {
     name: '',
     email: '',
     message: '',
+    nameFocused: true,
+    emailFocused: true,
+    messageFocused: true,
   };
 
   mailTest = true;
-  isFormValid = false;
   isCheckboxChecked = false;
+  isFormValidName = true;
+  isFormValidEmail = true;
+  isFormValidMessage = true;
+
+  setFocus(field: string, isFocused: boolean, ngModel: any) {
+    if (field === 'name') {
+      this.contactData.nameFocused = isFocused;
+      this.isFormValidName = ngModel.valid;
+      if (!isFocused && !ngModel.valid) {
+        this.contactData.name = '';
+      }
+    } else if (field === 'email') {
+      this.contactData.emailFocused = isFocused;
+      this.isFormValidEmail = ngModel.valid;
+      if (!isFocused && !ngModel.valid) {
+        this.contactData.email = '';
+      }
+    } else if (field === 'message') {
+      this.contactData.messageFocused = isFocused;
+      this.isFormValidMessage = ngModel.valid;
+      if (!isFocused && !ngModel.valid) {
+        this.contactData.message = '';
+      }
+    }
+  }
+
+  resetInput() {
+    this.contactData.name = '';
+    this.contactData.email = '';
+    this.contactData.message = '';
+    this.contactData.nameFocused = true;
+    this.contactData.emailFocused = true;
+    this.contactData.messageFocused = true;
+    this.checkboxRef.checked = false;
+    this.isCheckboxChecked = false;
+  }
+
+  checkCheckbox(event: Event) {
+    this.checkboxRef = event.target as HTMLInputElement;
+    this.isCheckboxChecked = this.checkboxRef.checked;
+  }
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -36,46 +81,25 @@ export class ContactFormComponent implements OnInit {
     },
   };
 
-  ngOnInit() {
-    this.checkFormValidity();
-  }
-
-  checkFormValidity() {
-    this.isFormValid =
-      this.contactData.name.trim() !== '' &&
-      this.contactData.email.trim() !== '' &&
-      this.contactData.message.trim() !== '' &&
-      this.isCheckboxChecked;
-  }
-
-  onCheckboxChange(event: any) {
-    this.isCheckboxChecked = event.target.checked;
-    this.checkFormValidity();
-  }
-
-  onInputChange() {
-    this.checkFormValidity();
-  }
-
   onSubmit(ngForm: NgForm) {
-    if (this.isFormValid && !this.mailTest) {
+    if (!this.isCheckboxChecked) return;
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.resetInput();
             ngForm.resetForm();
-            this.isCheckboxChecked = false;
-            this.checkFormValidity();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (this.isFormValid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log('send post complete (test)');
+      this.resetInput();
       ngForm.resetForm();
-      this.isCheckboxChecked = false;
-      this.checkFormValidity();
     }
   }
 }

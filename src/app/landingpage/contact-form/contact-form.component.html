@@ -4,27 +4,37 @@
             <div class="contactFormWrapper">
                 <div class="contactInformations">
                     <div class="input-container">
-                        <input #name="ngModel" [(ngModel)]="contactData.name" [ngModelOptions]="{standalone:true}"
-                            type="text" id="name" name="name" placeholder="{{ 'contactform.name' | translate}}"
-                            minlength="2" required pattern="">
-                        <span class="validation-message" *ngIf="!name.valid && name.touched">Bitte geben Sie einen Namen
-                            ein</span>
+                        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                            (focus)="setFocus('name', true, name)" (blur)="setFocus('name', false, name)"
+                            [attr.placeholder]="!contactData.nameFocused  ? '' : ('contactform.name' | translate)"
+                            minlength="2" required pattern=".{2,}">
+                        <span class="validation-message"
+                            *ngIf="!name.valid && name.touched && !contactData.nameFocused && !isFormValidName">
+                            Bitte geben Sie einen Namen ein
+                        </span>
                     </div>
                     <div class="input-container">
-                        <input #mail="ngModel" [(ngModel)]="contactData.email" [ngModelOptions]="{standalone:true}"
-                            type="email" name="email" id="email" placeholder="{{'contactform.mail' | translate}}"
+                        <input #mail="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
+                            (focus)="setFocus('email', true, mail)" (blur)="setFocus('email', false, mail)"
+                            [attr.placeholder]="!contactData.emailFocused ? '' : ('contactform.mail' | translate)"
                             required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                        <span class="validation-message" *ngIf="!mail.valid && mail.touched">Bitte geben Sie eine
-                            E-Mail-Adresse ein</span>
+                        <span class="validation-message"
+                            *ngIf="!mail.valid && mail.touched && !contactData.emailFocused && !isFormValidEmail">
+                            Bitte geben Sie eine E-Mail-Adresse ein
+                        </span>
                     </div>
                 </div>
                 <div class="textarea">
                     <div class="input-container">
-                        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
-                            [ngModelOptions]="{standalone:true}" name="message" id="message"
-                            placeholder="{{'contactform.message'| translate}}"></textarea>
-                        <span class="validation-message" *ngIf="!message.valid && message.touched">Bitte geben Sie eine
-                            Nachricht ein</span>
+                        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message"
+                            id="message" (focus)="setFocus('message', true, message)"
+                            (blur)="setFocus('message', false, message)"
+                            [attr.placeholder]="!contactData.messageFocused ? '' : ('contactform.message'| translate)"
+                            required pattern=".{4,}"></textarea>
+                        <span class="validation-message"
+                            *ngIf="!message.valid && message.touched && !contactData.messageFocused && !isFormValidMessage">
+                            Bitte geben Sie eine Nachricht ein
+                        </span>
                     </div>
                 </div>
             </div>
@@ -33,7 +43,7 @@
             <div class="confirmationSection">
                 <div class="confirmationSectionWrapper">
                     <label class="checkboxItem">
-                        <input type="checkbox" name="checkbox" class="checkbox" />
+                        <input (change)="checkCheckbox($event)" type="checkbox" name="checkbox" class="checkbox" />
                     </label>
                     <p>{{'contactform.privacyOne'|translate}}
                         <span class="privacyTwo">{{'contactform.privacyTwo' | translate}}</span>
