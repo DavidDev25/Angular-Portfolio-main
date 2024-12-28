@@ -28,12 +28,13 @@ export class ContactFormComponent {
     messageFocused: true,
   };
 
-  mailTest = false;
+  mailTest = true;
   isCheckboxChecked = false;
   isFormValidName = true;
   isFormValidEmail = true;
   isFormValidMessage = true;
   isButtonDisabled = true;
+  showFeedback = false;
 
   updateButtonState() {
     this.isButtonDisabled = !(
@@ -99,6 +100,13 @@ export class ContactFormComponent {
     },
   };
 
+  showFeedbackMessage() {
+    this.showFeedback = true;
+    setTimeout(() => {
+      this.showFeedback = false;
+    }, 3000);
+  }
+
   onSubmit(ngForm: NgForm) {
     if (!this.isCheckboxChecked) return;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
@@ -108,6 +116,7 @@ export class ContactFormComponent {
           next: (response) => {
             this.resetInput();
             ngForm.resetForm();
+            this.showFeedbackMessage();
           },
           error: (error) => {
             console.error(error);
@@ -117,6 +126,7 @@ export class ContactFormComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.resetInput();
       ngForm.resetForm();
+      this.showFeedbackMessage();
     }
   }
 

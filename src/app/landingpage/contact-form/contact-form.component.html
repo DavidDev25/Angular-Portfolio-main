@@ -51,12 +51,14 @@
                         </a>
                         {{'contactform.privacyThree' | translate}}
                     </p>
-
                 </div>
             </div>
             <div class="sendBtn">
                 <input class="sendbutton" type="submit" [value]="'contactform.send' | translate"
                     [disabled]="isButtonDisabled">
+            </div>
+            <div class="feedback-message" *ngIf="showFeedback">
+                {{ 'contactform.feedbackMessage' | translate }}
             </div>
         </div>
     </form>
