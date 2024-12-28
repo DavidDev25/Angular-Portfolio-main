@@ -22,7 +22,7 @@ export class FooterComponent {
   }
 
   redirectLinkedIn() {
-    window.open('www.linkedin.com/in/david-werner-01a88032a');
+    window.open('https://www.linkedin.com/in/david-werner-01a88032a');
   }
 
   mailTo() {
