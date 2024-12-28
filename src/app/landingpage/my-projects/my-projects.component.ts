@@ -13,7 +13,9 @@ export class MyProjectsComponent {
   }
 
   redirectJoinLive() {
-    window.open('http://david-werner.developerakademie.net/Join/index.html');
+    window.open(
+      'https://david-werner.developerakademie.net/joinProjekt/index.html'
+    );
   }
 
   redirect() {
