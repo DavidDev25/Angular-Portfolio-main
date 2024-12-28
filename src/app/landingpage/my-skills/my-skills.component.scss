@@ -98,7 +98,7 @@ section {
   }
 
   .Skills {
-    width: 300px;
+    width: 550px;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px 15px;
 
@@ -110,8 +110,20 @@ section {
 
 @media screen and (max-width: 600px) {
   .Skills {
-    width: 500px;
+    width: 450px;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px 15px;
+  }
+
+  @media screen and (max-width: 450px) {
+    .Skills {
+      width: 200px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 15px;
+    }
+
+    .ChallengeMeText {
+      text-align: center;
+    }
   }
 }

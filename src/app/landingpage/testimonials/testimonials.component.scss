@@ -93,12 +93,24 @@ svg {
     flex: 0 0 auto;
     width: 250px;
     overflow-y: auto;
-    height: 500px;
-    font-size: 10px;
+    height: 300px;
+    font-size: 12px;
     padding: 0 10px 10px;
     border: 1px solid $text-color;
     text-align: center;
     white-space: normal;
+    -webkit-overflow-scrolling: touch;
+    @include custom-scrollbar;
+    justify-content: center;
+
+    h3,
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+    }
   }
 
   svg {
