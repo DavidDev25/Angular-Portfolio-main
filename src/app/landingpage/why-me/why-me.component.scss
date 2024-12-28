@@ -91,6 +91,10 @@ button {
   color: #0b042d;
   font-size: 18px;
   font-weight: 500;
+
+  &:hover {
+    color: #e15544;
+  }
 }
 
 .letsTalkButton {

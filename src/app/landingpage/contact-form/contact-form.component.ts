@@ -26,7 +26,7 @@ export class ContactFormComponent {
     messageFocused: true,
   };
 
-  mailTest = true;
+  mailTest = false;
   isCheckboxChecked = false;
   isFormValidName = true;
   isFormValidEmail = true;
@@ -71,7 +71,7 @@ export class ContactFormComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: './sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -97,7 +97,6 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log('send post complete (test)');
       this.resetInput();
       ngForm.resetForm();
     }

@@ -24,7 +24,7 @@
 button {
   cursor: pointer;
   rotate: 180deg;
-  border: 1px solid;
+  border: 1px #02f4bf solid;
   padding-top: 20px;
   padding-right: 10px;
   padding-bottom: 20px;
@@ -37,6 +37,11 @@ button {
   line-height: 21.6px;
   writing-mode: vertical-lr;
   text-transform: uppercase;
+
+  &:hover {
+    transition: color 300ms ease-out;
+    color: #02f4bf;
+  }
 }
 
 .introduction {
@@ -67,6 +72,11 @@ button {
   align-items: center;
   cursor: pointer;
   min-height: 100%;
+  fill: #e15544;
+
+  &:hover {
+    fill: white;
+  }
 }
 
 @media screen and (max-width: 1210px) {

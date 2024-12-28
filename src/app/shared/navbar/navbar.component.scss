@@ -20,8 +20,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: white;
-  stroke: white;
+  fill: #e15544;
+  stroke: #e15544;
   cursor: pointer;
   display: none;
 
@@ -83,6 +83,10 @@ img {
     color: #e15544;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+      color: #02f4bf;
+    }
   }
 }
 
@@ -96,6 +100,10 @@ img {
     color: #e15544;
     font-size: 18px;
     cursor: pointer;
+
+    &:hover {
+      color: #02f4bf;
+    }
   }
 
   .vertical-line {

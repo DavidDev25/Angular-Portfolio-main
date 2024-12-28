@@ -22,6 +22,10 @@
   border: 1px solid#02f4bf;
   padding: 15px 30px 15px 30px;
   gap: 10px;
+
+  &:hover {
+    color: #02f4bf;
+  }
 }
 .upperContent,
 .bottomContent,
@@ -49,6 +53,10 @@ h3 {
   padding: 15px 30px 15px 30px;
   gap: 10px;
   border: none;
+
+  &:hover {
+    color: #e15544;
+  }
 }
 
 .myProjectText {

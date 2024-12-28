@@ -48,6 +48,10 @@
 .legalBlock {
   display: flex;
   gap: 1rem;
+
+  :hover {
+    color: #02f4bf;
+  }
 }
 
 .socials {
@@ -56,17 +60,19 @@
   display: flex;
   justify-content: space-between;
 }
+.githubIcon,
+.mailIcon,
+.linkedInIcon {
+  fill: #e15544;
+  &:hover {
+    fill: #02f4bf;
+  }
+}
 
 @media screen and (max-width: 975px) {
   .MidPartFooter h2 {
     font-size: 20 px;
   }
-
-  .socials img {
-    width: 30px;
-    height: 30px;
-  }
-
   .leftFooter img {
     width: 80px;
     height: 41px;
@@ -119,6 +125,10 @@
     height: 15px;
     gap: 0.9375rem;
     padding-bottom: 30px;
+    fill: #e15544;
+    &:hover {
+      fill: #02f4bf;
+    }
   }
 }
 

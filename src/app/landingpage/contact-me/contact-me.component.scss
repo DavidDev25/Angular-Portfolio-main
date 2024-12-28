@@ -8,6 +8,14 @@
   padding-inline: 50px;
   padding-top: 10px;
   padding-bottom: 40px;
+
+  svg {
+    fill: #e15544;
+    &:hover {
+      fill: #02f4bf;
+      border: 1px solid #02f4bf;
+    }
+  }
 }
 
 .contactMe {
@@ -34,6 +42,7 @@
 .Phone {
   display: flex;
   align-items: center;
+  fill: #e15544;
   gap: 0.875rem;
   span {
     font-size: 20px;
@@ -43,6 +52,18 @@
   }
 }
 
+.Phone {
+  &:hover {
+    fill: #02f4bf;
+  }
+}
+
+.mail {
+  &:hover {
+    cursor: pointer;
+    fill: #02f4bf;
+  }
+}
 .bottomSection {
   display: flex;
   gap: 45px;
