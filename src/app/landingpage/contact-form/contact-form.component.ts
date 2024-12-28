@@ -31,6 +31,19 @@ export class ContactFormComponent {
   isFormValidName = true;
   isFormValidEmail = true;
   isFormValidMessage = true;
+  isButtonDisabled = true;
+
+  updateButtonState() {
+    this.isButtonDisabled = !(
+      this.contactData.name &&
+      this.contactData.email &&
+      this.contactData.message &&
+      this.isCheckboxChecked &&
+      this.isFormValidName &&
+      this.isFormValidEmail &&
+      this.isFormValidMessage
+    );
+  }
 
   setFocus(field: string, isFocused: boolean, ngModel: any) {
     if (field === 'name') {
@@ -52,6 +65,7 @@ export class ContactFormComponent {
         this.contactData.message = '';
       }
     }
+    this.updateButtonState();
   }
 
   resetInput() {
@@ -63,11 +77,13 @@ export class ContactFormComponent {
     this.contactData.messageFocused = true;
     this.checkboxRef.checked = false;
     this.isCheckboxChecked = false;
+    this.updateButtonState();
   }
 
   checkCheckbox(event: Event) {
     this.checkboxRef = event.target as HTMLInputElement;
     this.isCheckboxChecked = this.checkboxRef.checked;
+    this.updateButtonState();
   }
 
   post = {

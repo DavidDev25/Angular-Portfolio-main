@@ -18,6 +18,22 @@
     padding: 15px 30px;
     gap: 0.625rem;
     margin-top: 60px;
+
+    &:not(:disabled) {
+      border-radius: #02f4b4;
+      color: #02f4b4;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #02f4b4;
+        color: #000;
+      }
+    }
+
+    &_disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
   }
 
   textarea {
