@@ -81,27 +81,26 @@ button {
   }
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 1205px) {
   .introduction h1 {
-    font-size: 42px;
+    font-size: 48px;
+    line-height: 98.4px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .introduction h2 {
+    font-size: 26px;
   }
 
   .unneccaressaryArrowDown img {
     width: 80px;
     height: 80px;
   }
-  .introduction h2 {
-    font-size: 42px;
-  }
-}
-
-@media screen and (max-width: 975px) {
-  .introduction h2 {
-    font-size: 32px;
-  }
 
   .introduction h1 {
-    font-size: 52px;
+    font-size: 26px;
   }
 
   .unneccaressaryArrowDown {
@@ -117,14 +116,7 @@ button {
     }
   }
 }
-
-@media screen and (max-width: 984) {
-  .contactMeButton {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 778px) {
   .hero {
     display: flex;
   }
