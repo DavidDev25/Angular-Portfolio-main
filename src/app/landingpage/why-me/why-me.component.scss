@@ -196,7 +196,7 @@ button {
     }
 
     p {
-      font-size: 10px;
+      font-size: 12px;
       text-align: center;
     }
   }
@@ -209,7 +209,7 @@ button {
 
   .locatedText {
     p {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     img {
@@ -220,7 +220,7 @@ button {
 
   .remoteText {
     p {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 
@@ -242,12 +242,16 @@ button {
     align-items: center;
     justify-content: center;
     padding-left: 20px;
-    width: 100px;
-    height: 40px;
     margin-bottom: 40px;
     p {
-      font-size: 10px;
+      font-size: 12px;
+      padding-left: 15px;
     }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
   }
 
   .whyMeWrapper {
