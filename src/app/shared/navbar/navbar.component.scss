@@ -5,10 +5,10 @@ nav {
 }
 
 .navbar {
-  padding-inline: 120px;
   padding-block: 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1440px;
   width: 100%;
   margin-inline: auto;
@@ -72,8 +72,8 @@ nav {
 }
 
 img {
-  width: 90px;
-  height: 40px;
+  width: 88px;
+  height: 20px;
 }
 
 .navbarText {
