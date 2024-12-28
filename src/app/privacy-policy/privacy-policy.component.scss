@@ -1,58 +1,39 @@
 .privacy-Policy {
   color: white;
-}
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 20px;
 
-imprint {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-
-  .imprint-site {
-    max-width: 1440px;
-    width: 100%;
-    margin-inline: auto;
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--secondary-color);
-    padding-top: 50px;
-    padding-inline: 96px;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    margin-bottom: 50px;
-    position: relative;
-
-    @media (max-width: 945px) {
-      margin-block: 25px;
-      padding-inline: 16px;
-      padding-top: 0px;
-    }
-
-    .header,
-    .address,
-    .representedBy,
-    .contact {
-      margin-block: 10px;
-    }
-
-    & a {
-      color: var(--primary-color);
-    }
-
-    & h1,
+  &-site {
+    h1,
     h2,
     h3,
+    h4 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
     p,
     ul {
-      margin-top: 15px;
+      margin-bottom: 1em;
     }
 
-    & ul {
-      margin-left: 20px;
+    ul {
+      padding-left: 20px;
     }
 
-    & li {
-      margin-block: 10px;
+    a {
+      color: #02f4bf;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .privacy-Policy {
+    padding: 30px 15px;
   }
 }

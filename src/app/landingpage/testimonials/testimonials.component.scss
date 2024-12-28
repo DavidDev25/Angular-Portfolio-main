@@ -1,28 +1,55 @@
-h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #e15544;
+$primary-color: #02f4bf;
+$secondary-color: #e15544;
+$text-color: #ffffff;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin custom-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+    &:hover {
+      background: #555;
+    }
+  }
 }
 
 .TestimonialsWrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   max-width: 1440px;
   width: 100%;
   margin-inline: auto;
-  padding-inline: 50px;
-  padding-top: 10px;
-  padding-bottom: 40px;
+  padding: 10px 50px 40px;
   gap: 60px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: $secondary-color;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: $primary-color;
+    font-weight: 400;
+    padding: 8px 0 32px;
+  }
 }
 
-h4 {
-  font-size: 18px;
-  line-height: 25.2px;
-  color: #02f4bf;
-  font-weight: 400;
-  padding-bottom: 32px;
-  padding-top: 8px;
+.AllTestimonials {
+  display: flex;
+  gap: 32px;
 }
 
 .Testimonials {
@@ -31,14 +58,9 @@ h4 {
   p {
     font-size: 16px;
     font-weight: 400;
-    color: #02f4bf;
+    color: $primary-color;
     line-height: 21.6px;
   }
-}
-
-.AllTestimonials {
-  display: flex;
-  gap: 32px;
 }
 
 svg {
@@ -53,6 +75,10 @@ svg {
   .TestimonialsWrapper {
     padding-inline: 20px;
     overflow-x: hidden;
+
+    h3 {
+      text-align: center;
+    }
   }
 
   .AllTestimonials {
@@ -60,23 +86,7 @@ svg {
     white-space: nowrap;
     padding-bottom: 16px;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 4px;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
+    @include custom-scrollbar;
   }
 
   .Testimonials {
@@ -85,9 +95,8 @@ svg {
     overflow-y: auto;
     height: 500px;
     font-size: 10px;
-    padding-inline: 10px;
-    padding-bottom: 10px;
-    border: 1px solid white;
+    padding: 0 10px 10px;
+    border: 1px solid $text-color;
     text-align: center;
     white-space: normal;
   }
