@@ -34,11 +34,15 @@
     "headline": "Still not sure if I am the right person for your project? Contact me so I can reassure you. Let us work together"
   },
   "contactform": {
-    "name": "Your Name",
-    "mail": "Your E-mail",
-    "message": "Your message",
-    "privacyOne": "I've read the",
-    "privacyTwo": " privacy policy",
-    "privacyThree": "and agree to the processing of my data as outlined."
+    "name": "Enter your name",
+    "mail": "Enter your email address",
+    "message": "Enter your message",
+    "nameValidation": "Please enter a valid name (at least 2 characters)",
+    "emailValidation": "Please enter a valid email address",
+    "messageValidation": "Please enter a message (at least 4 characters)",
+    "privacyOne": "I accept the",
+    "privacyTwo": "privacy policy",
+    "privacyThree": "and agree to the processing of my data as outlined.",
+    "send": "Send"
   }
 }
