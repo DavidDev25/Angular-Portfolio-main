@@ -1,20 +1,28 @@
-.contactMeWrapper {
+$primary-color: #02f4bf;
+$secondary-color: #e15544;
+$text-color: #827b7b;
+
+@mixin flex-center {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactMeWrapper {
+  @include flex-center;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   max-width: 1440px;
   width: 100%;
   margin-inline: auto;
-  padding-inline: 50px;
-  padding-top: 10px;
-  padding-bottom: 40px;
+  padding: 10px 50px 40px;
 
-  svg {
+  > svg {
     cursor: pointer;
-    fill: #e15544;
+    fill: $secondary-color;
     &:hover {
-      fill: #02f4bf;
-      border: 1px solid #02f4bf;
+      fill: $primary-color;
+      border: 1px solid $primary-color;
     }
   }
 }
@@ -26,12 +34,13 @@
   font-size: 54px;
   line-height: 65px;
   font-weight: 500;
-  color: #e15544;
+  color: $secondary-color;
+
   p {
     font-size: 18px;
     line-height: 21.6px;
     text-align: justify;
-    color: #02f4bf;
+    color: $primary-color;
   }
 }
 
@@ -39,32 +48,35 @@
   width: 42%;
 }
 
-.mail,
-.Phone {
+%contact-info {
   display: flex;
   align-items: center;
-  fill: #e15544;
+  fill: $secondary-color;
   gap: 0.875rem;
+
   span {
     font-size: 20px;
-    font-family: 500;
-    color: #02f4bf;
+    font-weight: 500;
+    color: $primary-color;
     line-height: 24px;
   }
-}
 
-.Phone {
-  &:hover {
-    fill: #02f4bf;
+  svg {
+    &:hover {
+      fill: $primary-color;
+    }
   }
 }
 
 .mail {
-  &:hover {
-    cursor: pointer;
-    fill: #02f4bf;
-  }
+  @extend %contact-info;
+  cursor: pointer;
 }
+
+.Phone {
+  @extend %contact-info;
+}
+
 .bottomSection {
   display: flex;
   gap: 45px;
@@ -81,7 +93,7 @@
 .upperSection {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   gap: 24px;
 }
 
@@ -91,28 +103,28 @@ img {
 
 .agreeSection {
   p {
-    color: #02f4bf;
+    color: $primary-color;
     font-size: 14px;
     font-weight: 400;
   }
 }
 
 .privPolicyColored {
-  color: #e15544;
+  color: $secondary-color;
 }
 
 input.custom {
-  border-color: #e15544;
+  border-color: $secondary-color;
   background: none;
 }
 
 .sendRequestButton {
   display: flex;
-  color: #827b7b;
-  padding: 15px 30px 15px 30px;
+  color: $text-color;
+  padding: 15px 30px;
   gap: 10px;
   background: transparent;
-  border: 1px solid #827b7b;
+  border: 1px solid $text-color;
 }
 
 @media screen and (max-width: 1370px) {
@@ -120,9 +132,7 @@ input.custom {
     justify-content: center;
   }
   .bottomSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 70px;
     & p,
     span {
@@ -140,20 +150,15 @@ input.custom {
     justify-content: center;
   }
   .bottomSection {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
     & p {
       font-size: 14px;
       line-height: 16.8px;
     }
 
     .contactInformation {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
+      @include flex-center;
       & span {
         text-align: center;
         font-size: 14px;
@@ -168,6 +173,7 @@ input.custom {
     h3 {
       font-size: 24px;
       line-height: 25px;
+      text-align: center;
     }
     & svg {
       display: none;
@@ -175,12 +181,9 @@ input.custom {
   }
 
   .bottomSection {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     flex-direction: column;
     text-align: center;
-    align-items: center;
-
     & p {
       font-size: 14px;
       line-height: 16.8px;
@@ -194,10 +197,7 @@ input.custom {
     text-align: center;
   }
 
-  .contactMeWrapper img {
-    display: none;
-  }
-
+  .contactMeWrapper img,
   .contactInformation {
     display: none;
   }
