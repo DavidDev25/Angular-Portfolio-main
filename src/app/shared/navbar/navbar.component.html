@@ -1,11 +1,11 @@
 <nav>
     <div class="navbar">
-        <img src="/DWLogo.svg" alt="DWLogo">
+        <img src="/DWLogo.svg" alt="DWLogo" (click)="scrollToTop()">
         <div class="navbarText">
-            <a href="">{{ 'navbar.whyMe' | translate}}</a>
-            <a href="">{{ 'navbar.skills' | translate}}</a>
-            <a href="">{{ 'navbar.projects' | translate}}</a>
-            <a href="">{{ 'navbar.contact' | translate}}</a>
+            <a (click)="navigateToSection('whyMe')">{{ 'navbar.whyMe' | translate }}</a>
+            <a (click)="navigateToSection('mySkills')">{{ 'navbar.skills' | translate }}</a>
+            <a (click)="navigateToSection('projects')">{{ 'navbar.projects' | translate }}</a>
+            <a (click)="navigateToSection('contactMe')">{{ 'navbar.contact' | translate }}</a>
         </div>
 
         <div class="toggle_switch">
@@ -29,10 +29,10 @@
             <path d="M6 6L18 18" stroke="#E15544" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
     </div>
-    <a href="">{{ 'navbar.whyMe' | translate}}</a>
-    <a href="">{{ 'navbar.skills' | translate}}</a>
-    <a href="">{{ 'navbar.projects' | translate}}</a>
-    <a href="">{{ 'navbar.contact' | translate}}</a>
+    <a (click)="navigateToSection('whyMe')">{{ 'navbar.whyMe' | translate }}</a>
+    <a (click)="navigateToSection('mySkills')">{{ 'navbar.skills' | translate }}</a>
+    <a (click)="navigateToSection('projects')">{{ 'navbar.projects' | translate }}</a>
+    <a (click)="navigateToSection('contactMe')">{{ 'navbar.contact' | translate }}</a>
     <div class="toggle_switch_responsive">
         <button (click)="translate.switchLanguage('de')">DE</button>
         <div class="vertical-line">|</div>

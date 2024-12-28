@@ -8,7 +8,6 @@
   max-width: 1440px;
   width: 100%;
   margin-inline: auto;
-
   padding-top: 5px;
 }
 
@@ -39,7 +38,7 @@ button {
   text-transform: uppercase;
 
   &:hover {
-    transition: color 300ms ease-out;
+    transition: color 300ms ease-in-out;
     color: #02f4bf;
   }
 }
@@ -104,11 +103,6 @@ button {
 
   .unneccaressaryArrowDown {
     display: none;
-  }
-
-  img {
-    width: 350px;
-    height: 350px;
   }
 
   .contactMeButton {

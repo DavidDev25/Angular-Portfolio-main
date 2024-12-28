@@ -1,18 +1,54 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../../../public/i18n/translation.service';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
   translate = inject(TranslationService);
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+
   isMenuOpen = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  navigateToSection(fragment: string): void {
+    if (
+      this.router.url.includes('privacy') ||
+      this.router.url.includes('legal')
+    ) {
+      this.router.navigate(['/'], { fragment: fragment }).then(() => {
+        this.scrollToElement(fragment);
+      });
+    } else {
+      this.scrollToElement(fragment);
+    }
+  }
+
+  private scrollToElement(fragment: string): void {
+    setTimeout(() => {
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  }
+
+  scrollToTop(): void {
+    if (
+      this.router.url.includes('privacy') ||
+      this.router.url.includes('legal')
+    ) {
+      this.router.navigate(['/']);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
