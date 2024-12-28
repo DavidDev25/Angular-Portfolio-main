@@ -80,6 +80,15 @@ $input-height-mobile: 40px;
 
   .privacyTwo {
     color: #e15544;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #0056b3;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 
   .contactFormWrapper {
