@@ -14,6 +14,11 @@
   padding-top: 50px;
 }
 
+.contactInformation,
+.socialsResponsive {
+  display: none;
+}
+
 .MidPartFooter {
   display: flex;
   color: #e15544;
@@ -73,7 +78,7 @@
 
 @media screen and (max-width: 975px) {
   .MidPartFooter h2 {
-    font-size: 20 px;
+    font-size: 20px;
   }
   .leftFooter img {
     width: 80px;
@@ -108,8 +113,17 @@
     justify-content: center;
     flex-direction: column;
     gap: 8px;
-  }
+    p {
+      display: none;
+    }
 
+    // margin-top: 200px;
+  }
+  .socialsResponsive {
+    display: flex;
+    margin-block: 50px;
+    gap: 25px;
+  }
   .MidPartFooter {
     display: flex;
     align-items: center;
@@ -119,18 +133,44 @@
     text-align: center;
   }
 
-  .socials {
+  .legalBlock {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-block: 1.25rem;
+  }
+  .contactInformation {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 15px;
-    height: 15px;
-    gap: 0.9375rem;
-    padding-bottom: 30px;
-    fill: #e15544;
-    &:hover {
-      fill: #02f4bf;
+    text-align: center;
+    gap: 10px;
+
+    .mail,
+    .Phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        margin-bottom: 5px;
+        width: 24px;
+        height: auto;
+        fill: #e15544;
+      }
+
+      span {
+        font-size: 14px;
+        color: #02f4bf;
+      }
     }
+  }
+
+  .Phone {
+    text-decoration: none;
+  }
+
+  .socials {
+    display: none;
   }
 }
 

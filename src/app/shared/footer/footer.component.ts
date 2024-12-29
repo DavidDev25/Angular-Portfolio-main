@@ -38,4 +38,13 @@ export class FooterComponent {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  openMailTo() {
+    const email = 'contact@david-werner.dev';
+    const subject = encodeURIComponent('Kontaktanfrage');
+    const body = encodeURIComponent(
+      'Hallo David,\n\nIch möchte gerne Kontakt aufnehmen.'
+    );
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  }
 }
