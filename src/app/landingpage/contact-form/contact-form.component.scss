@@ -59,7 +59,7 @@ $input-height-mobile: 40px;
   }
 
   textarea {
-    width: 720px;
+    width: 100%;
     height: 155px;
 
     &::placeholder {
@@ -187,24 +187,7 @@ $input-height-mobile: 40px;
     }
   }
 
-  @media screen and (max-width: 1440px) {
-    .contactInformations {
-      gap: 20px;
-      width: 45%;
-    }
-
-    #name,
-    #email,
-    .textarea,
-    textarea {
-      @include mobile-layout;
-    }
-
-    .textarea {
-      width: 45%;
-      justify-content: center;
-    }
-  }
+  //
 
   @media screen and (max-width: 1370px) and (min-width: 1025px) {
     .contactFormWrapper {
@@ -268,7 +251,6 @@ $input-height-mobile: 40px;
     #email,
     textarea {
       width: 100%;
-      height: $input-height-mobile;
     }
   }
 
