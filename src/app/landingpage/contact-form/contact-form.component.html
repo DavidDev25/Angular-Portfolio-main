@@ -26,9 +26,9 @@
                 </div>
                 <div class="textarea">
                     <div class="input-container">
-                        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message"
-                            id="message" (focus)="setFocus('message', true, message)"
-                            (blur)="setFocus('message', false, message)"
+                        <textarea class="messageBoxBig" #message="ngModel" minlength="4"
+                            [(ngModel)]="contactData.message" name="message" id="message"
+                            (focus)="setFocus('message', true, message)" (blur)="setFocus('message', false, message)"
                             [attr.placeholder]="!contactData.messageFocused ? '' : ('contactform.message' | translate)"
                             required pattern=".{4,}"></textarea>
                         <span class="validation-message"
