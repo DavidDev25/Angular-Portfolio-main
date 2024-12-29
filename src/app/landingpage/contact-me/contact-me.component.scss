@@ -151,6 +151,7 @@ input.custom {
   .upperSection {
     justify-content: center;
   }
+
   .bottomSection {
     width: 100%;
     @include flex-center;
@@ -168,6 +169,12 @@ input.custom {
       }
     }
   }
+}
+
+.arrowUp {
+  width: 22px;
+  height: 50px;
+  fill: #e15544;
 }
 
 @media screen and (max-width: 768px) {
@@ -203,5 +210,11 @@ input.custom {
   .contactMeWrapper img,
   .contactInformation {
     display: none;
+  }
+
+  .arrowUp svg {
+    width: 30px;
+    height: 30px;
+    fill: #e15544;
   }
 }
