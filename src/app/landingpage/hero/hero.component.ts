@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-hero',
-  imports: [RouterModule],
+  imports: [RouterModule, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
@@ -11,12 +11,13 @@ export class HeroComponent {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
 
-  scrollToBottom(): void {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth',
-    });
+  scrollToWhyMe(): void {
+    const whyMeSection = document.getElementById('whyMe');
+    if (whyMeSection) {
+      whyMeSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
+
   navigateToSection(fragment: string): void {
     if (
       this.router.url.includes('privacy') ||
