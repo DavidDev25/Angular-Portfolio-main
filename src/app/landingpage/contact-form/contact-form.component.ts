@@ -104,7 +104,7 @@ export class ContactFormComponent {
     this.showFeedback = true;
     setTimeout(() => {
       this.showFeedback = false;
-    }, 3000);
+    }, 5000);
   }
 
   onSubmit(ngForm: NgForm) {
