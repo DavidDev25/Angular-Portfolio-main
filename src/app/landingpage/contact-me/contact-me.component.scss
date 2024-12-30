@@ -77,6 +77,13 @@ $text-color: #827b7b;
 .Phone {
   @extend %contact-info;
   text-decoration: none;
+
+  svg {
+    cursor: pointer;
+    &:hover {
+      fill: $primary-color;
+    }
+  }
 }
 
 .bottomSection {
@@ -172,6 +179,7 @@ input.custom {
 }
 
 .arrowUp {
+  cursor: pointer;
   width: 22px;
   height: 50px;
   fill: #e15544;
