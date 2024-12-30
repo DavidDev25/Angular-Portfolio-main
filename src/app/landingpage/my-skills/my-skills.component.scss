@@ -110,7 +110,8 @@ section {
 
 @media screen and (max-width: 600px) {
   .Skills {
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px 15px;
   }
