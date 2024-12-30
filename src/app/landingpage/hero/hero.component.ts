@@ -12,10 +12,17 @@ export class HeroComponent {
   private route = inject(ActivatedRoute);
 
   scrollToWhyMe(): void {
-    const whyMeSection = document.getElementById('whyMe');
-    if (whyMeSection) {
-      whyMeSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const whyMeSection = document.getElementById('whyMe');
+      if (whyMeSection) {
+        const elementPosition =
+          whyMeSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - 70,
+          behavior: 'smooth',
+        });
+      }
+    }, 100);
   }
 
   navigateToSection(fragment: string): void {
