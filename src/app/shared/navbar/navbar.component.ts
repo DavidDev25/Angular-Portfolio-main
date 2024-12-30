@@ -26,10 +26,20 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    this.disableScroll();
+    if (this.isMenuOpen) {
+      this.disableScroll();
+    } else {
+      this.enableScroll();
+    }
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+    this.enableScroll();
   }
 
   navigateToSection(fragment: string): void {
+    this.closeMenu();
     if (
       this.router.url.includes('privacy') ||
       this.router.url.includes('legal')
@@ -57,6 +67,7 @@ export class NavbarComponent {
   }
 
   scrollToTop(): void {
+    this.closeMenu();
     if (
       this.router.url.includes('privacy') ||
       this.router.url.includes('legal')
