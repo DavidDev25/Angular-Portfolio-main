@@ -109,6 +109,10 @@ $input-padding: 10px;
     width: 60%;
   }
 
+  .arrowUp {
+    display: none;
+  }
+
   .checkBoxSection {
     display: flex;
     flex-direction: row;
@@ -284,6 +288,22 @@ $input-padding: 10px;
       width: 100%;
       display: flex;
       justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .arrowUp {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: #e15544;
+      }
     }
   }
 

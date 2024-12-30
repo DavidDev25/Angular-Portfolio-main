@@ -133,4 +133,14 @@ export class ContactFormComponent {
     event.preventDefault();
     this.router.navigate(['/privacy-policy']);
   }
+
+  scrollToTop(): void {
+    if (
+      this.router.url.includes('privacy') ||
+      this.router.url.includes('legal')
+    ) {
+      this.router.navigate(['/']);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
