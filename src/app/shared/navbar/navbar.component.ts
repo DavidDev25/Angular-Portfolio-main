@@ -46,7 +46,12 @@ export class NavbarComponent {
     setTimeout(() => {
       const element = document.getElementById(fragment);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const elementPosition =
+          element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - 70,
+          behavior: 'smooth',
+        });
       }
     }, 100);
   }
