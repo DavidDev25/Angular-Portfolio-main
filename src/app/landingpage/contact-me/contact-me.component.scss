@@ -16,7 +16,7 @@ $text-color: #827b7b;
   max-width: 1440px;
   width: 100%;
   margin-inline: auto;
-  padding: 10px 50px 40px;
+  padding: 50px 50px 40px;
 
   > svg {
     cursor: pointer;
@@ -76,7 +76,12 @@ $text-color: #827b7b;
 
 .Phone {
   @extend %contact-info;
+  width: 100%;
   text-decoration: none;
+
+  & a {
+    cursor: default;
+  }
 
   svg {
     cursor: pointer;
@@ -151,6 +156,12 @@ input.custom {
 
   .contactInformation {
     width: 33%;
+  }
+}
+
+.arrowUp {
+  :hover {
+    fill: #02f4bf;
   }
 }
 
