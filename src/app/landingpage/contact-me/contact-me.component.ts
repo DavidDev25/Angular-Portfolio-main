@@ -22,7 +22,7 @@ export class ContactMeComponent {
   }
 
   openMailTo() {
-    const email = 'contact@david-werner.dev';
+    const email = 'david.werner@david-werner.dev';
     const subject = encodeURIComponent('Kontaktanfrage');
     const body = encodeURIComponent(
       'Hallo David,\n\nIch möchte gerne Kontakt aufnehmen.'
