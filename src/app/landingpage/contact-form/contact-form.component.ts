@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -111,7 +111,11 @@ export class ContactFormComponent {
     if (!this.isCheckboxChecked) return;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options
+        )
         .subscribe({
           next: (response) => {
             this.resetInput();
@@ -119,7 +123,10 @@ export class ContactFormComponent {
             this.showFeedbackMessage();
           },
           error: (error) => {
-            console.error(error);
+            console.error('Fehler beim Senden der E-Mail:', error);
+            if (error instanceof HttpErrorResponse) {
+              console.error('Antwort vom Server:', error.error);
+            }
           },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {

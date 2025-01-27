@@ -1,5 +1,20 @@
 <?php
 
+/**
+ * @fileoverview Email handling script for contact form
+ */
+
+/**
+ * Email handling script for contact form
+ * 
+ * Processes OPTIONS preflight requests and POST requests to send emails
+ * Accepts JSON payload with email, name and message
+ * Sends HTML formatted email to configured recipient
+ * 
+ * @param string $email Sender's email address
+ * @param string $name Sender's name
+ * @param string $message Message content
+ */
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
@@ -18,7 +33,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = $params->name;
             $message = $params->message;
     
-            $recipient = 'david.werner@david-werner.dev';  
+            $recipient = 'contact@mirkorinke.dev';  
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     
@@ -27,7 +42,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@mirkorinke.dev";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
