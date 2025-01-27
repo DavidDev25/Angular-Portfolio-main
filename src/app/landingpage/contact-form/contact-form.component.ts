@@ -16,7 +16,7 @@ export class ContactFormComponent {
 
   private checkboxRef!: HTMLInputElement;
 
-  http = inject(HttpClient);
+  http: HttpClient = inject(HttpClient);
   router = inject(Router);
 
   contactData = {
